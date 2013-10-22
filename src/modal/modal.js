@@ -220,7 +220,7 @@ angular.module('ui.bootstrap.modal', [])
 
           function getTemplatePromise(options) {
             return options.template ? $q.when(options.template) :
-              $http.get(options.templateUrl, {cache: $templateCache}).then(function (result) {
+              $http.get(options.templateUrl, {}).then(function (result) {
                 return result.data;
               });
           }
